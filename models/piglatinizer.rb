@@ -1,7 +1,14 @@
 class PigLatinizer
   def piglatinize(text)
-    text = text+text[0]+"ay"
+
+
+
+
+    # nothing special (starts with ONE consonant)
+    text = text+text[0]
     text[0] = ''
-    text
+
+    # ALL cases
+    text+'ay'
   end
 end
