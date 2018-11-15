@@ -1,7 +1,7 @@
 class PigLatinizer
   def piglatinize(text)
 
-    if text[0].downcase[/[aeiou]/].count > 0
+    if text[0].downcase[/[aeiou]/]
       text+='w'
     else
       # nothing special (starts with ONE consonant)
