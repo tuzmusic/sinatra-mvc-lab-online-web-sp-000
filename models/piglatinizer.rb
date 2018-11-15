@@ -1,11 +1,13 @@
 class PigLatinizer
   def piglatinize(text)
 
-    if text[0].downcase[/[aeiou]/]
+    if text[0].downcase[/[aeiou]/] # starts with a vowel
       text+='w'
     else
-      # nothing special (starts with ONE consonant)
-      text = text[1..-1]+text[0]
+
+      while !text[0].downcase[/[aeiou]/]
+        text = text[1..-1]+text[0] # starts with 1 consonant
+      end
     end
     # ALL cases
     text+'ay'
