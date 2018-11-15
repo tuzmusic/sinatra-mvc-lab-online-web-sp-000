@@ -1,5 +1,5 @@
 class PigLatinizer
-  def piglatinize(word)
+  def translate(word)
     if word[0].downcase[/[aeiou]/]
       word+='w'
     else
@@ -9,4 +9,9 @@ class PigLatinizer
     end
     word+'ay'
   end
+
+  def piglatinize(text)
+    text.split(' ').map {|word| translate(word)}
+  end
+
 end
